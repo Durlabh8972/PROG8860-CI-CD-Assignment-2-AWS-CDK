@@ -1,0 +1,3 @@
+{
+  "app": "npx ts-node bin/durlabh-cdk-pipeline.ts"
+}

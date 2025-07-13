@@ -1,0 +1,98 @@
+{
+  "version": "45.0.0",
+  "artifacts": {
+    "DurlabhCdkPipelineStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "DurlabhCdkPipelineStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "DurlabhCdkPipelineStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://440716895645/us-east-1",
+      "properties": {
+        "templateFile": "DurlabhCdkPipelineStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::440716895645:role/cdk-hnb659fds-deploy-role-440716895645-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::440716895645:role/cdk-hnb659fds-cfn-exec-role-440716895645-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-440716895645-us-east-1/beea70a51cd5731b78cf1b8b36c0c777a93fa3380f41562b364718befa8d23f3.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "DurlabhCdkPipelineStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::440716895645:role/cdk-hnb659fds-lookup-role-440716895645-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "DurlabhCdkPipelineStack.assets"
+      ],
+      "metadata": {
+        "/DurlabhCdkPipelineStack/DurlabhBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DurlabhBucket2D933A15"
+          }
+        ],
+        "/DurlabhCdkPipelineStack/DurlabhLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DurlabhLambdaServiceRole7B5C26CB"
+          }
+        ],
+        "/DurlabhCdkPipelineStack/DurlabhLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DurlabhLambdaF7EFE309"
+          }
+        ],
+        "/DurlabhCdkPipelineStack/DurlabhTable": [
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "DurlabhTable0471387C"
+            }
+          }
+        ],
+        "/DurlabhCdkPipelineStack/DurlabhTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "DurlabhTable0471387C"
+          }
+        ],
+        "/DurlabhCdkPipelineStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/DurlabhCdkPipelineStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/DurlabhCdkPipelineStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "DurlabhCdkPipelineStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  },
+  "minimumCliVersion": "2.1020.2"
+}

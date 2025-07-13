@@ -1,0 +1,21 @@
+{
+  "version": "45.0.0",
+  "files": {
+    "beea70a51cd5731b78cf1b8b36c0c777a93fa3380f41562b364718befa8d23f3": {
+      "displayName": "DurlabhCdkPipelineStack Template",
+      "source": {
+        "path": "DurlabhCdkPipelineStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "440716895645-us-east-1": {
+          "bucketName": "cdk-hnb659fds-assets-440716895645-us-east-1",
+          "objectKey": "beea70a51cd5731b78cf1b8b36c0c777a93fa3380f41562b364718befa8d23f3.json",
+          "region": "us-east-1",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::440716895645:role/cdk-hnb659fds-file-publishing-role-440716895645-us-east-1"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
